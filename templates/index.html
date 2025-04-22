@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicação com Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    
+    <h1>Pesquisa sobre Python e POO</h1>
+
+    <div>
+        <h2>Resultados da Pesquisa:</h2>
+        <p><strong>O que é Python?</strong></p>
+        <p>Python é uma linguagem de programação de alto nível, interpretada, de script, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi criada por Guido van Rossum em 1991. É uma linguagem de uso geral, versátil e fácil de aprender, que pode ser usada para uma grande variedade de aplicações, desde desenvolvimento web até ciência de dados e inteligência artificial.</p>
+        
+        <p><strong>Para que serve Python?</strong></p>
+        <p>O Python é uma linguagem de programação amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). Os desenvolvedores usam o Python porque é eficiente e fácil de aprender e pode ser executada em muitas plataformas diferentes.</p>
+        
+        <p><strong>Vantagens de usar Python na vida profissional:</strong></p>
+        <ul>
+            <li>⤷  Facilidade de aprendizado e legibilidade do código.</li>
+            <li>⤷  Grande comunidade e vasta documentação.</li>
+            <li>⤷  Bibliotecas poderosas e amplamente utilizadas (como Django, Flask, Pandas, NumPy, etc.).</li>
+            <li>⤷  Alta produtividade devido à sintaxe simples e concisa.</li>
+            <li>⤷  Usado por grandes empresas em projetos de alto impacto (como Google, Netflix, Spotify, etc.).</li>
+        </ul>
+        
+        <p><strong>O que é POO (Programação Orientada a Objetos)?</strong></p>
+        <p>Programação Orientada a Objetos (POO) é um paradigma de programação que organiza o código em torno de objetos, que são entidades que possuem dados (atributos) e comportamentos (métodos). Ela promove a organização, reutilização e manutenção do código, facilitando o desenvolvimento de sistemas complexos. </p>
+        
+            <p><strong>Vantagens de utilizar o POO:</strong></p>
+            <ul>
+                <li>⤷  Melhora a organização e estrutura do código, tornando-o mais modular e fácil de manter.</li>
+                <li>⤷  Permite reutilização de código através de herança e polimorfismo.</li>
+                <li>⤷  Facilita a manutenção e a expansão do software.</li>
+                <li>⤷  Aumenta a clareza do código ao modelar o mundo real de maneira mais próxima.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h1>Digite seu nome</h1>
+        <form action="/processar" method="POST">
+            <input type="text" name="nome" required>
+            <button type="submit">Enviar</button>
+        </form>
+    
+        {% if mensagem %}
+            <h2 class="h2">{{ mensagem }}</h2>
+        {% endif %}
+    
+        <hr>
+    </body>
+    </html>
+    
